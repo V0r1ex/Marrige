@@ -427,8 +427,8 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Marrige/sources/4ECHf86f7Hg.jpg') center/cover no-repeat;
-    background-position-y: -1100px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./sources/4ECHf86f7Hg.jpg') center/cover no-repeat;
+    background-position-y: 60%;
     color: var(--white);
     text-align: center;
 }
@@ -542,7 +542,9 @@ p {
 
 /* Responsive design */
 @media (max-width: 768px) {
-
+    .countdown-section {
+        background-position-y: 40%;
+    }
     .timeline::after {
         left: 31px;
     }
