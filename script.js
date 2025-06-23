@@ -20,10 +20,24 @@ function generateCalendar() {
     const daysInMonth = 31; // В августе 31 день
     const firstDay = 5; // 1 августа 2025 - пятница (0 - воскресенье, 1 - понедельник, ... 5 - пятница)
     
+    // Создаем строку с днями недели
+    const weekdaysRow = document.createElement('div');
+    weekdaysRow.classList.add('weekdays-row');
+    
+    const weekdays = ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'];
+    weekdays.forEach(day => {
+        const dayElement = document.createElement('div');
+        dayElement.classList.add('weekday');
+        dayElement.textContent = day;
+        weekdaysRow.appendChild(dayElement);
+    });
+    const calendarHeader = document.querySelector('.calendar-header')
+    calendarHeader.parentNode.insertBefore(weekdaysRow, calendarHeader.nextSibling);
+    
     // Пустые ячейки для дней перед 1 августа
     for (let i = 0; i < firstDay; i++) {
         const emptyDay = document.createElement('div');
-        emptyDay.classList.add('calendar-day');
+        emptyDay.classList.add('calendar-day', 'empty-day');
         calendarGrid.appendChild(emptyDay);
     }
     
