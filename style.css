@@ -427,7 +427,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./sources/4ECHf86f7Hg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Marrige/sources/4ECHf86f7Hg.jpg') center/cover no-repeat;
     background-position-y: -1100px;
     color: var(--white);
     text-align: center;
